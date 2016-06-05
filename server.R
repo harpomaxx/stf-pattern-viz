@@ -2,8 +2,7 @@ library(shiny)
 library(MASS)
 library('plotly')
 #global variales
-# TODO:
-# 1. Solo se consideran los primeros 300 parametros
+
 
 
 #Global variables
@@ -70,24 +69,29 @@ shinyServer(function(input, output,session) {
       mfrow = c(nbar_row, nbar_column),
       mar = c(0, 0, 0.25, 0) + 0.0
     )
-    
-    patterns = unique(datafiltered$pattern)
     min_total_freq = input$total
     min_label_freq = input$connection
+    
+    filteredby_total_freq=datafiltered[which(datafiltered$total_frequency>= min_total_freq),]
+    filteredby_label=filteredby_total_freq[ filteredby_total_freq$pattern %in%  names(table(filteredby_total_freq$pattern))
+         [table(filteredby_total_freq$pattern) >=min_label_freq] , ]
+    
+    patterns = unique(filteredby_label$pattern)
+    
     
     results$patt=c()
     pattern_counter = 0
     for (pattern in patterns) {
-         pattern_rows<-datafiltered[which(datafiltered$pattern==pattern),]
+       pattern_rows<-filteredby_label[which(filteredby_label$pattern==pattern),]
          
          cur_freq<-pattern_rows[,2][1]
          cur_label_freq <-length(pattern_rows[, 4])
          
-      if (cur_freq >= min_total_freq &&
-           cur_label_freq>= min_label_freq)
+      #if (cur_freq >= min_total_freq &&
+      #     cur_label_freq>= min_label_freq)
+      if(T)
       {
         pattern2 = pattern_rows[, c(3, 4)]
-        
 #       DEPRECATED
 #       pattern2 = cbind(pattern2, rep(0))
 #       pattern2[grep('Normal', pattern2$label), 3] = 0
