@@ -17,11 +17,11 @@ def ranking_similar_words(path, len_of_words):
     length = int(len_of_words)
     for line in lines:
         text = line.split('|')
-        if count != 0 and len(text) == 4:
+        if count != 0 and len(text) == 9:
             connection = line.split('|')
-            text = connection[3]
+            text = connection[4]
             status = clear_text(text)
-            note = clear_text(connection[1])
+            note = clear_text(connection[5])
             if len(status) > length:
                 list_all_words[note] = all_word_list(status, length)
         count += 1

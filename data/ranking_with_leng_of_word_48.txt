@@ -1,0 +1,13 @@
+pattern|total_frequency |label|label_frequency|
+i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0|28|Botnet-TCP-IRC-CC-Not-Encrypted|28|
+0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i|28|Botnet-TCP-IRC-CC-Not-Encrypted|28|
+h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,|26|Botnet-TCP-HTTP-CC-Custom-Encryption|10|
+h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,|26|Normal-TCP-HTTP|16|
+,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h|26|Botnet-TCP-HTTP-CC-Custom-Encryption|10|
+,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h|26|Normal-TCP-HTTP|16|
+f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0|16|Normal-UDP-NTP-server|16|
+0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f|16|Normal-UDP-NTP-server|16|
+88,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h|2|Botnet-TCP-HTTP-CC-Custom-Encryption|1|
+88,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h|2|Normal-TCP-HTTP|1|
+8,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,|2|Botnet-TCP-HTTP-CC-Custom-Encryption|1|
+8,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,h,|2|Normal-TCP-HTTP|1|

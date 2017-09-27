@@ -105,9 +105,9 @@ shinyServer(function(input, output,session) {
         pattern2 = pattern2[order(pattern2$label), ]
     
         cols = c()
-        cols='red'
-        cols[grep('Normal', pattern2$label)] = 'skyblue'
-        cols[grep('Botnet', pattern2$label)] = 'orange'
+        cols='white'
+        cols[grep(input$colorpattern1, pattern2$label)] = 'skyblue'
+        cols[grep(input$colorpattern2, pattern2$label)] = 'orange'
         
         barplot(
           cbind(pattern2$percent),
@@ -193,11 +193,10 @@ shinyServer(function(input, output,session) {
       plot_ly(y=label,
               x=freq,type='bar',
               orientation='h',marker=list(color=cols)
-      )
-      layout(xaxis = ax, yaxis = ay,
+      ) %>% layout(xaxis = ax, yaxis = ay,
              title=paste("Pattern: ",plot_pattern, "Total freq.:",total_freq[1]
              ),
-             hovermode='closest')
+             hovermode='closest') %>%
       config(displayModeBar = F)
   })
   

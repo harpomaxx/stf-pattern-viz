@@ -35,8 +35,12 @@ shinyUI(fluidPage(
    column(width = 3,
           sliderInput("size", label = h5("Select the number of flows in ST connection (e.g. Word length)"),
                       min = 5, max = 100, value = c(5)),
-          textInput("filterpattern", label = h5("Label Filter Pattern (e.g. TCP)"), 
-                    value = '[a-zA-Z0-9]')
+          textInput("filterpattern", label = h5("General Label Filter Pattern (e.g. TCP)") ,
+                    value = '[a-zA-Z0-9]'),
+          textInput("colorpattern1", label = h5("Color Filter Pattern (skyblue)"), 
+                    value = 'Normal'),
+          textInput("colorpattern2", label = h5("Color Filter Pattern (orang)e"), 
+                    value = 'Botnet')
               )
    
      )

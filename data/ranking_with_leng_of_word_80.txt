@@ -1,0 +1,3 @@
+pattern|total_frequency |label|label_frequency|
+i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0|12|Botnet-TCP-IRC-CC-Not-Encrypted|12|
+0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i0i|12|Botnet-TCP-IRC-CC-Not-Encrypted|12|
