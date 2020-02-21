@@ -29,11 +29,11 @@ An example of these **behavioral models** is shown below. The figure shows the s
 
 ####  2.4.R,R.R.R,a,b,a.a,b,b,a,R.R.R.R.a.a.b.a.a.a.a.
     
-Without even considering any **detection method**, the **behavioral models** based on symbols   have proved to be a good visualization approach for helping  security analysts in their daily tasks.
+Without even considering any **detection method**, the **behavioral models** based on symbols have proved to be a good visualization approach for helping security analysts in their daily tasks.
 
 ### The STF-pattern-viz tool
 
-Before developing any new detection method, good data science practices suggest to analize the potential discrimitive power of the symbol-based behavioral models described above. With that purpose in mind, we developed *stf-pattern-viz*. The idea behind *stf-pattern-viz* is quite simple, given a dataset with labeled behavioral models, we extract all the *n-grams* from the dataset. The size of *n* can vary from 1 to 100. Then, the app will provide information about three aspects for all the considered *n-grams* . 
+Before developing any new detection method, good data science practices suggest to analize the potential discriminative power of the symbol-based behavioral models described above. With that purpose in mind, we developed *stf-pattern-viz*. The idea behind *stf-pattern-viz* is quite simple, given a dataset with labeled behavioral models, we extract all the *n-grams* from the dataset. The size of *n* can vary from 1 to 100. Then, the app will provide information about three aspects for all the considered *n-grams* . 
 
 The aspects considered are basically:
 
@@ -47,18 +47,18 @@ The aspects considered are basically:
 
 Such information mainly is provided using visualization tools in the following way: 
 
-1. Each *n-gram* is represented by a rectangle. Right now the app  shows only the first 300 *n-gram*
+1. Each *n-gram* is represented by a rectangle. Right now the app shows only the first 300 *n-gram*
 
-2. A subdivision inside the rectangle indicates the same *n-gram* was seen in different behavioral models. THe more subdivisions, the more observations of the *n-gram* pattern in different behavioral models.
+2. A subdivision inside the rectangle indicates the same *n-gram* was seen in different behavioral models. The more subdivisions, the more observations of the *n-gram* pattern in different behavioral models.
 
 3. By default, normal behaviors are represented in Blue while Malicious in Orange. 
 
 
-By using this simple strategy you can have an idea about the discrimitave power of *n-ngrams* in a given dataset. Clearly, a rectangle painted with only one color indicates that particular pattern was only observed in one behavioral models with the same label. On the other side, a rectangle painted with different colors indicates class overlaping for that particular pattern.
+By using this simple strategy you can have an idea about the discriminative power of *n-ngrams* in a given dataset. Clearly, a rectangle painted with only one color indicates that particular pattern was only observed in one behavioral models with the same label. On the other side, a rectangle painted with different colors indicates class overlaping for that particular pattern.
 
 #### Detailed View
 
-If you click inside any rectangle you will access to detailed information about this particular *n-gram*. In the bottom of the screen, an Frequency histogram for the selected *n-gram* is shown. There you will find information about the different behavioral models where that *n-gram* patterm was observed.
+If you click inside any rectangle you will access to detailed information about this particular *n-gram*. In the bottom of the screen, an Frequency histogram for the selected *n-gram* is shown. There you will find information about the different behavioral models where that *n-gram* pattern was observed.
 
 #### Filtering *n-grams*
 
@@ -71,10 +71,10 @@ The application support some basic pattern filtering.
 3. Filter *n-grams* observed at least in *y* different behavioral models.
 
 By default the applications will consider all the behavioral models present in the dataset. However it is possible to filter by using the **Label** information. 
-Additionally, it is possible to filter by **Label**. Since the standard STF **Label** contains information regarding the different protocol layers, it then possible to filter by protocol layer 4 or 5. Such filtering is done by using standar regular expressions. Finally, it is also possible to select the what partion of the label youwant to discriminate. By default the idea behing the blue and orange schem colors is to differentiate between **Normal** and **Malicious**. However, you are not restricted to only this differention. If you want to use the color scheme for discriminating between, for instance, DNS traffic DGA and Normal, you can do it easily using regular expressions.   
+Additionally, it is possible to filter by **Label**. Since the standard STF **Label** contains information regarding the different protocol layers, it then possible to filter by protocol layer 4 or 5. Such filtering is done by using standard regular expressions. Finally, it is also possible to select the what portion of the label you want to discriminate. By default the idea behing the blue and orange schem colors is to differentiate between **Normal** and **Malicious**. However, you are not restricted to only this differention. If you want to use the color scheme for discriminating between, for instance, DNS traffic DGA and Normal, you can do it easily using regular expressions.   
 
 ### Live Demo
-By now, a live demo is available at (https://harpomaxx.shinyapps.io/stf-pattern-viz/). This demo contains a subset of the [CTU-13 Dataset](http://mcfp.weebly.com/the-ctu-13-dataset-a-labeled-dataset-with-botnet-normal-and-background-traffic.html). Some minor modifications were made in the label description for facilitating the aggregation. A detail about the labeld modification and how the CTU-13 subset was generated is found [here](http://rpubs.com/harpomaxx/ctu13bis)
+By now, a live demo is available at (https://harpomaxx.shinyapps.io/stf-pattern-viz/). This demo contains a subset of the [CTU-13 Dataset](http://mcfp.weebly.com/the-ctu-13-dataset-a-labeled-dataset-with-botnet-normal-and-background-traffic.html). Some minor modifications were made in the label description for facilitating the aggregation. A detail about the label modification and how the CTU-13 subset was generated is found [here](http://rpubs.com/harpomaxx/ctu13bis)
 
 ### Including your own dataset
 [TODO]
